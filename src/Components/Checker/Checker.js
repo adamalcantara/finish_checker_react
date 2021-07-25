@@ -70,12 +70,17 @@ const Checker = () => {
     }
 
     function showPosition(position) {
-        
+        //Set informationEl to nothing, then make an API call
+        API.geoWEather(position).then((res) => {
+            
+        })
     }
 
     const handleInputChange = e => {
         setSearchValue(e.target.value);
     }
+
+    currentLocation();
 
     return (
         <div>
