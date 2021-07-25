@@ -35,7 +35,15 @@ const Checker = () => {
             //Create div for lacquer information
             let lacquerEl = document.createElement("div");
             lacquerEl.classList.add("lacquerEl")
-            
+
+            //if statement for appending items to the page
+            if (humidity < 65 && temp < 90) {
+                lacquerEl.classList.add("lacquerGood");
+                lacquerEl.append("Go Ahead");
+            } else {
+                lacquerEl.classList.add("lacquerBad");
+                lacquerEl.append("Don't you dare");
+            }
         })
 
     }
