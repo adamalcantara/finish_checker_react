@@ -70,9 +70,27 @@ const Checker = () => {
     }
 
     function showPosition(position) {
+         //Get informationEL from the page
+         const informationEl = document.getElementById("informationEl");
+        
+         //Set informationEl to blank
+         informationEl.innerHTML = "";
+         
         //Set informationEl to nothing, then make an API call
         API.geoWeather(position).then((res) => {
             console.log(res.data);
+
+            //get the names and temperatures for the position from the geolocation
+            let positionName = res.data.list[0].name;
+            console.log(positionName);
+            let positionTemp = res.data.list[0].main.temp;
+            console.log(positionTemp);
+            let positionHum = res.data.list[0].main.humidity;
+            console.log(positionHum);
+
+            let positionNameEl = document.createElement("h2");
+            positionNameEl.append(positionName);
+            informationEl.append(positionNameEl);
         })
     }
 
