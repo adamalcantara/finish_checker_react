@@ -17,6 +17,10 @@ const Checker = () => {
             console.log(temp);
             let name = res.data.name;
             console.log(name);
+
+            let cityNameEl = document.createElement("h2");
+            cityNameEl.append(name);
+            informationEl.append(cityNameEl);
         })
 
     }
