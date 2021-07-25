@@ -6,10 +6,15 @@ const Checker = () => {
     const [searchValue, setSearchValue] = useState("");
 
     const getWeather = (search) => {
+        //Get informationEL from the page
+        const informationEl = document.getElementById("informationEl");
+        
+        //Set informationEl to blank
+        informationEl.innerHTML = "";
         API.getWeather(searchValue).then((res) => {
             console.log(res.data);
 
-            const informationEl = document.getElementById("informationEl");
+            
 
             let humidity = res.data.main.humidity;
             console.log(humidity);
@@ -44,6 +49,12 @@ const Checker = () => {
                 lacquerEl.classList.add("lacquerBad");
                 lacquerEl.append("Don't you dare");
             }
+
+            //Append lacquerEl to lacquerDiv
+            lacquerDiv.append(lacquerEl);
+
+            //Append the information to the page
+            informationEl.append(lacquerDiv);
         })
 
     }
