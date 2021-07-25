@@ -101,6 +101,25 @@ const Checker = () => {
             positionLacquerTitle.classList.add("lacquerTitle")
             positionLacquerTitle.append("Nitrocellulose Lacquer")
             positionLacquerDiv.append(positionLacquerTitle)
+
+            //Create div for lacquer information
+            let positionLacquerEl = document.createElement("div");
+            positionLacquerEl.classList.add("lacquerEl")
+
+            //if statement for appending items to the page
+            if (positionHum < 65 && positionTemp < 90) {
+                positionLacquerEl.classList.add("lacquerGood");
+                positionLacquerEl.append("Go Ahead");
+            } else {
+                positionLacquerEl.classList.add("lacquerBad");
+                positionLacquerEl.append("Don't you dare");
+            }
+
+            //Append lacquerEl to lacquerDiv
+            positionLacquerDiv.append(positionLacquerEl);
+
+            //Append the information to the page
+            informationEl.append(positionLacquerDiv);
         })
     }
 
