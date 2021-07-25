@@ -21,6 +21,21 @@ const Checker = () => {
             let cityNameEl = document.createElement("h2");
             cityNameEl.append(name);
             informationEl.append(cityNameEl);
+
+            //Create div for the lacquer
+            let lacquerDiv = document.createElement("div")
+            lacquerDiv.classList.add("lacquerDiv")
+
+            //Create a div for the title, and append the title to that div, then append it to the page
+            let lacquerTitle = document.createElement("h3")
+            lacquerTitle.classList.add("lacquerTitle")
+            lacquerTitle.append("Nitrocellulose Lacquer")
+            lacquerDiv.append(lacquerTitle)
+
+            //Create div for lacquer information
+            let lacquerEl = document.createElement("div");
+            lacquerEl.classList.add("lacquerEl")
+            
         })
 
     }
