@@ -9,6 +9,8 @@ const Checker = () => {
         API.getWeather(searchValue).then((res) => {
             console.log(res.data);
         })
+        const informationEl = document.getElementById("informationEl");
+        informationEl.append("Hello World")
     }
     
     const handleInputChange = e => {
@@ -22,6 +24,10 @@ const Checker = () => {
             getWeather={getWeather}
             setSearchValue={setSearchValue}
             handleInputChange={handleInputChange}/>
+
+            <div id="informationEl">
+
+            </div>
         </div>
     )
 }
