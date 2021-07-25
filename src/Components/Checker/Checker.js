@@ -4,11 +4,14 @@ import SearchForm from '../SearchForm/SearchForm';
 
 const Checker = () => {
     const [searchValue, setSearchValue] = useState("");
+    const [isSearched, setIsSearched] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(true);
 
     const getWeather = (search) => {
+        setIsLoaded(false);
         //Get informationEL from the page
         const informationEl = document.getElementById("informationEl");
-        
+
         //Set informationEl to blank
         informationEl.innerHTML = "";
         API.getWeather(searchValue).then((res) => {
