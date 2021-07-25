@@ -5,6 +5,8 @@ import SearchForm from '../SearchForm/SearchForm';
 const Checker = () => {
     const [searchValue, setSearchValue] = useState("");
 
+
+    //Function to get weather by Zip Code from search box
     const getWeather = (search) => {
         //Get informationEL from the page
         const informationEl = document.getElementById("informationEl");
@@ -57,6 +59,18 @@ const Checker = () => {
             informationEl.append(lacquerDiv);
         })
 
+    }
+
+    function currentLocation() {
+        if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            alert("Geolocation is not supported")
+        }
+    }
+
+    function showPosition(position) {
+        
     }
 
     const handleInputChange = e => {
