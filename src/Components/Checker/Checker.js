@@ -91,6 +91,16 @@ const Checker = () => {
             let positionNameEl = document.createElement("h2");
             positionNameEl.append(positionName);
             informationEl.append(positionNameEl);
+
+            //Create div for the lacquer
+            let positionLacquerDiv = document.createElement("div")
+            positionLacquerDiv.classList.add("lacquerDiv")
+
+            //Create a div for the title, and append the title to that div, then append it to the page
+            let positionLacquerTitle = document.createElement("h3")
+            positionLacquerTitle.classList.add("lacquerTitle")
+            positionLacquerTitle.append("Nitrocellulose Lacquer")
+            positionLacquerDiv.append(positionLacquerTitle)
         })
     }
 
