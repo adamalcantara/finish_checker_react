@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import API from "../../utils/API";
 import SearchForm from '../SearchForm/SearchForm';
+import loadinggif from "../../Assets/loadinganim1.gif"
 
 const Checker = () => {
     const [searchValue, setSearchValue] = useState("");
@@ -9,11 +10,12 @@ const Checker = () => {
 
     const getWeather = (search) => {
         setIsLoaded(false);
+        setIsSearched(true);
         //Get informationEL from the page
         const informationEl = document.getElementById("informationEl");
 
         //Set informationEl to blank
-        informationEl.innerHTML = "";
+        // informationEl.innerHTML = "";
         API.getWeather(searchValue).then((res) => {
             console.log(res.data);
 
@@ -28,7 +30,7 @@ const Checker = () => {
 
             let cityNameEl = document.createElement("h2");
             cityNameEl.append(name);
-            informationEl.append(cityNameEl);
+            
 
             //Create div for the lacquer
             let lacquerDiv = document.createElement("div")
@@ -57,13 +59,17 @@ const Checker = () => {
             lacquerDiv.append(lacquerEl);
 
             //Append the information to the page
+            informationEl.append(cityNameEl);
             informationEl.append(lacquerDiv);
+            setIsLoaded(true);
+            
         })
 
     }
 
     const handleInputChange = e => {
         setSearchValue(e.target.value);
+        
     }
 
     return (
@@ -75,7 +81,10 @@ const Checker = () => {
                 handleInputChange={handleInputChange} />
 
             <div id="informationEl">
+            {isSearched ? !isLoaded ? <img src={loadinggif}></img> : <div>
 
+            </div>
+            : null}
             </div>
         </div>
     )
