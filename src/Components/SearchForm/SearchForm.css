@@ -14,16 +14,16 @@
 }
 
 .btn {
-    background-color: #cf2e34;
+    background-color: #787878;
     border: 0.5px solid rgb(84, 84, 84, 0.3);
     /* border: none; */
     border-radius: 5px;
     font-size: 17px;
-    color: rgb(245, 227, 207);
+    color: white;
 }
 
 .btn:hover {
-    background-color: #8a1e21;
+    background-color: #3e3e3e;
     cursor: pointer;
 }
 
