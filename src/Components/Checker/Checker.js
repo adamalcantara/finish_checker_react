@@ -1,26 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import API from "../../utils/API";
-import SearchForm from '../SearchForm/SearchForm';
 import "./Checker.css"
 
 const Checker = () => {
-    // const [searchValue, setSearchValue] = useState("");
-
-    // let searchBtn = document.getElementById("searchBtn");
-
-    // searchBtn.addEventListener("click", searchValue);
-
+    //Get the search value from the box
     function searchValue() {
         let searchValue = document.querySelector("#searchBox").value;
         console.log(searchValue);
 
-        if (searchValue =="") {
+        //Alert user if search value is null
+        if (searchValue === "") {
             alert("Please input a search term");
             return false
         }
 
+        //Call get weather function
         getWeather(searchValue);
 
+        //Set search box value to nothing
         document.querySelector("#searchBox").value = "";
     }
 
