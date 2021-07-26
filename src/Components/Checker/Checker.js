@@ -63,6 +63,7 @@ const Checker = () => {
     }
 
     function currentLocation() {
+        console.log("getting current location")
         if(navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
         } else {
