@@ -92,3 +92,15 @@ h3 {
         font-size: 20px;
     }
 }
+
+@media screen and (max-width: 300px) {
+    #search {
+        flex-direction: column;
+    }
+    .input {
+        margin-right: 0;
+    }
+    #informationEl {
+        margin-top: 20px;
+    }
+}

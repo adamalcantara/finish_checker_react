@@ -19,3 +19,9 @@
         width: 325px;
     }
 }
+
+@media screen and (max-width: 300px) {
+    #logo {
+        width: 250px;
+    }
+}
