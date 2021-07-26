@@ -4,20 +4,37 @@ import SearchForm from '../SearchForm/SearchForm';
 import "./Checker.css"
 
 const Checker = () => {
-    const [searchValue, setSearchValue] = useState("");
+    // const [searchValue, setSearchValue] = useState("");
 
+    // let searchBtn = document.getElementById("searchBtn");
+
+    // searchBtn.addEventListener("click", searchValue);
+
+    function searchValue() {
+        let searchValue = document.querySelector("#searchBox").value;
+        console.log(searchValue);
+
+        if (searchValue =="") {
+            alert("Please input a search term");
+            return false
+        }
+
+        getWeather(searchValue);
+
+        document.querySelector("#searchBox").value = "";
+    }
 
     //Function to get weather by Zip Code from search box
-    const getWeather = (search) => {
+    function getWeather(searchValue) {
         //Get informationEL from the page
         const informationEl = document.getElementById("informationEl");
-        
+
         //Set informationEl to blank
         informationEl.innerHTML = "";
         API.getWeather(searchValue).then((res) => {
             console.log(res.data);
 
-            
+
 
             let humidity = res.data.main.humidity;
             console.log(humidity);
@@ -64,7 +81,7 @@ const Checker = () => {
 
     function currentLocation() {
         console.log("getting current location")
-        if(navigator.geolocation) {
+        if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
         } else {
             alert("Geolocation is not supported")
@@ -72,12 +89,12 @@ const Checker = () => {
     }
 
     function showPosition(position) {
-         //Get informationEL from the page
-         const informationEl = document.getElementById("informationEl");
-        
-         //Set informationEl to blank
-         informationEl.innerHTML = "";
-         
+        //Get informationEL from the page
+        const informationEl = document.getElementById("informationEl");
+
+        //Set informationEl to blank
+        informationEl.innerHTML = "";
+
         //Set informationEl to nothing, then make an API call
         API.geoWeather(position).then((res) => {
             console.log(res.data);
@@ -125,19 +142,23 @@ const Checker = () => {
         })
     }
 
-    const handleInputChange = e => {
-        setSearchValue(e.target.value);
-    }
+    // const handleInputChange = e => {
+    //     setSearchValue(e.target.value);
+    // }
 
     currentLocation();
 
     return (
         <div className="checker">
-            <SearchForm id="searchform"
+            {/* <SearchForm id="searchform"
                 searchValue={searchValue}
                 getWeather={getWeather}
                 setSearchValue={setSearchValue}
-                handleInputChange={handleInputChange} />
+                handleInputChange={handleInputChange} /> */}
+            <div id="search">
+                <input id="searchBox" className="input" placeholder="Enter ZIP Code"></input>
+                <button id="searchBtn" className="btn" onClick={searchValue}>Search</button>
+            </div>
 
             <div id="informationEl">
 

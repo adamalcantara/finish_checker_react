@@ -3,6 +3,31 @@
     text-align: center;
 }
 
+#search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    height: 20px;
+    width: 250px;
+    margin-right: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.btn {
+    background-color: #787878;
+    border: 0.5px solid rgb(84, 84, 84, 0.3);
+    /* border: none; */
+    border-radius: 5px;
+    font-size: 17px;
+    color: white;
+}
+
 #informationEl {
     margin-top: 50px;
 }
