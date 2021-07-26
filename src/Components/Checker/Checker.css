@@ -1,6 +1,7 @@
 .checker {
     margin-top: 40px;
     text-align: center;
+    margin: 0 auto;
 }
 
 #search {
@@ -50,4 +51,19 @@ h3 {
 
 .lacquerEl {
     font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .checker {
+        background-color: rgba(255, 255, 255, 0.7);
+        margin-top: 60px;
+        padding: 40px;
+        width: 70%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 20px;
+        border: 1px solid white;
+    }
 }
