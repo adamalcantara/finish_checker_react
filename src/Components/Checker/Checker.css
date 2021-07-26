@@ -71,3 +71,24 @@ h3 {
         
     }
 }
+
+@media screen and (max-width: 400px) {
+    .checker {
+        width: 70%;
+        padding: 30px;
+        height: 250px;
+        margin-bottom: 30px;
+    }
+    .input {
+        width: 175px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .lacquerEl {
+        font-size: 20px;
+    }
+}
