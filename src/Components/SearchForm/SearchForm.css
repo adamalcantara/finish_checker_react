@@ -4,14 +4,20 @@
 }
 
 .input {
-    height: 25px;
+    height: 30px;
+    width: 250px;
     margin-right: 10px;
+    font-size: 25px;
+
 }
 
 .btn {
     background-color: #b8dae5;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
+    border: none;
     border-radius: 5px;
+    font-size: 17px;
+
 }
 
 .btn:hover {

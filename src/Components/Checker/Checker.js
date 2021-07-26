@@ -50,7 +50,7 @@ const Checker = () => {
                 lacquerEl.append("Go Ahead");
             } else {
                 lacquerEl.classList.add("lacquerBad");
-                lacquerEl.append("Don't you dare");
+                lacquerEl.append("Don't You Dare");
             }
 
             //Append lacquerEl to lacquerDiv
@@ -113,7 +113,7 @@ const Checker = () => {
                 positionLacquerEl.append("Go Ahead");
             } else {
                 positionLacquerEl.classList.add("lacquerBad");
-                positionLacquerEl.append("Don't you dare");
+                positionLacquerEl.append("Don't You Dare");
             }
 
             //Append lacquerEl to lacquerDiv
