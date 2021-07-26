@@ -40,6 +40,11 @@
     color: white;
 }
 
+.btn:hover {
+    background-color: #cca664;
+    cursor: pointer;
+}
+
 #informationEl {
     margin-top: 50px;
 }
@@ -69,6 +74,9 @@ h3 {
         
         width: 70%;
         margin-bottom: 30px;
+    }
+    .btn {
+        background-color: #cca664;
     }
 }
 
