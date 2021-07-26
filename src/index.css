@@ -1,12 +1,15 @@
 body {
     margin: 0;
+    background-image: url("./Assets/img/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 820px) {
     body {
         background-image: url("./Assets/img/background.png");
         background-position: center 0;
         background-repeat: no-repeat;
-        
+        background-size: auto;
     }
 }
