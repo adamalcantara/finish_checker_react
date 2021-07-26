@@ -1,0 +1,20 @@
+#searchForm {
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    height: 25px;
+    margin-right: 10px;
+}
+
+.btn {
+    background-color: #b8dae5;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #97dce7;
+    cursor: pointer;
+}

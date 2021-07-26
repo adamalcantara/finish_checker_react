@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import API from "../../utils/API";
 import SearchForm from '../SearchForm/SearchForm';
+import "./Checker.css"
 
 const Checker = () => {
     const [searchValue, setSearchValue] = useState("");
@@ -130,7 +131,7 @@ const Checker = () => {
     currentLocation();
 
     return (
-        <div>
+        <div className="checker">
             <SearchForm id="searchform"
                 searchValue={searchValue}
                 getWeather={getWeather}

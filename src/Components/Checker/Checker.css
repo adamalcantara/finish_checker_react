@@ -1,0 +1,16 @@
+.checker {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#informationEl {
+    margin-top: 50px;
+}
+
+.lacquerGood {
+    color: green;
+}
+
+.lacquerBad {
+    color: red;
+}
