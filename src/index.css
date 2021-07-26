@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url("./Assets/img/background.png");
+        background-position: center 0;
+        background-repeat: no-repeat;
+        
+    }
+}
