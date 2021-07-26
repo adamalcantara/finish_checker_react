@@ -150,11 +150,6 @@ const Checker = () => {
 
     return (
         <div className="checker">
-            {/* <SearchForm id="searchform"
-                searchValue={searchValue}
-                getWeather={getWeather}
-                setSearchValue={setSearchValue}
-                handleInputChange={handleInputChange} /> */}
             <div id="search">
                 <input id="searchBox" className="input" placeholder="Enter ZIP Code"></input>
                 <button id="searchBtn" className="btn" onClick={searchValue}>Search</button>
