@@ -94,6 +94,7 @@ const Checker = () => {
 
         //Set informationEl to nothing, then make an API call
         API.geoWeather(position).then((res) => {
+            console.log("This is the location data")
             console.log(res.data);
 
             //get the names and temperatures for the position from the geolocation
